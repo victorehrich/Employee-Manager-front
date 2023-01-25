@@ -1,0 +1,33 @@
+<div id="buttons-wrapper" style="display: flex; flex-direction: row; justify-content: flex-end;">
+    <button-default label="Adicionar +" routerLink="newEmployee"></button-default>
+</div>
+
+<div class="cards-container">
+    <div *ngFor=" let employee of employees">
+        <app-card
+            [img]=employee.imageUrl
+            [label]=employee.name
+            [description]="employee.jobTitle"
+            [employee-id]="employee.id"
+        ></app-card>
+    </div>
+    <div *ngFor=" let employee of employees">
+        <app-card
+            [img]=employee.imageUrl
+            [label]=employee.name
+            [description]=employee.jobTitle
+            [employee-id]="employee.id"
+
+        ></app-card>
+    </div>
+    <div *ngFor=" let employee of employees">
+        <app-card
+            [img]=employee.imageUrl
+            [label]=employee.name
+            [description]=employee.jobTitle
+            [employee-id]="employee.id"
+
+        ></app-card>
+    </div>
+</div>
+

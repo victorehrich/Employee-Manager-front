@@ -1,0 +1,32 @@
+.cards-container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    padding: 12px;
+    grid-gap:24px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width:600px) {
+    .cards-container{
+        grid-template-columns: 70%;
+    }
+}
+
+@media screen and (min-width:600px){
+    .cards-container{
+        grid-template-columns: 40% 40%;
+    }
+}
+
+@media screen and (min-width:768px){
+    .cards-container{
+        grid-template-columns: 27% 27% 27%;
+    }
+}
+
+@media screen and (min-width:1200px){
+    .cards-container{
+        grid-template-columns: 22% 22% 22% 22%;
+    }
+}
