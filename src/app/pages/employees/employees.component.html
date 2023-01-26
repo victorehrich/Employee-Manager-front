@@ -1,9 +1,7 @@
 <div id="buttons-wrapper" style="display: flex; flex-direction: row; justify-content: flex-end;">
     <button-default label="Adicionar +" routerLink="newEmployee"></button-default>
 </div>
-
-<div class="cards-container">
-    <div *ngIf="employees.length > 0">
+    <div *ngIf="employees.length > 0" class="cards-container">
         <div *ngFor=" let employee of employees">
             <app-card
                 [img]=employee.imageUrl
@@ -19,5 +17,5 @@
     <div *ngIf="employees.length < 1">
         Nenhum funcionário encontrado
     </div>
-</div>
+
 
