@@ -1,4 +1,4 @@
-<div class="container-card" routerLink="updateEmployee/{{id}}">
+<div class="container-card">
     <div id="wrapper-img-text-card">
         <img src="{{img}}">
         <div id="wrapper-label-p-card">
@@ -8,5 +8,16 @@
 
     </div>
     <hr width="100%">
-
+    <label class="field"><strong>Email:</strong><br>{{email}}</label>
+    <label class="field"><strong>Telefone:</strong><br>{{phone | phone}}</label>
+    <label class="field"><strong>Salário:</strong><br>{{salary | currency: 'BRL'}}</label>
+    <hr>
+    <div id="wrapper-buttons-edit-delete" routerLink="updateEmployee/{{id}}">
+        <button>
+            <span class='material-symbols-outlined'>edit</span>
+        </button>
+        <button>
+            <span class="material-symbols-outlined">delete</span>
+        </button>
+    </div>
 </div>

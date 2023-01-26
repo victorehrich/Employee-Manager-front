@@ -3,31 +3,21 @@
 </div>
 
 <div class="cards-container">
-    <div *ngFor=" let employee of employees">
-        <app-card
-            [img]=employee.imageUrl
-            [label]=employee.name
-            [description]="employee.jobTitle"
-            [employee-id]="employee.id"
-        ></app-card>
+    <div *ngIf="employees.length > 0">
+        <div *ngFor=" let employee of employees">
+            <app-card
+                [img]=employee.imageUrl
+                [label]=employee.name
+                [description]="employee.jobTitle"
+                [employee-id]="employee.id"
+                [email]=employee.email
+                [phone]=employee.phone
+                [salary]="employee.salary"
+            ></app-card>
+        </div>
     </div>
-    <div *ngFor=" let employee of employees">
-        <app-card
-            [img]=employee.imageUrl
-            [label]=employee.name
-            [description]=employee.jobTitle
-            [employee-id]="employee.id"
-
-        ></app-card>
-    </div>
-    <div *ngFor=" let employee of employees">
-        <app-card
-            [img]=employee.imageUrl
-            [label]=employee.name
-            [description]=employee.jobTitle
-            [employee-id]="employee.id"
-
-        ></app-card>
+    <div *ngIf="employees.length < 1">
+        Nenhum funcionário encontrado
     </div>
 </div>
 

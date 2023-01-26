@@ -10,5 +10,9 @@ export class CardComponent {
   @Input() img: string = ""
   @Input() description:string = ""
   @Input('employee-id') id!:number
+  @Input() email:string = ""
+  @Input() phone:string = ""
+  @Input() salary!:number
+
   constructor() {}
 }

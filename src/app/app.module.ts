@@ -9,6 +9,7 @@ import { EmployeeCreateComponent } from './pages/employee-create/employee-create
 import { EmployeeService } from './services/employee.service';
 import { CardComponent } from './components/card/card.component';
 import { ButtonDefaultComponent } from './components/button-default/button-default.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ButtonDefaultComponent } from './components/button-default/button-defau
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
